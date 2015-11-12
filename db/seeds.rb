@@ -19,7 +19,7 @@ redis_data.each do |key, value|
   end
 
 # Inserting into mongo
-mongo_uri = ENV['mongodb://heroku_kkpqddm8:1chrq1pn46pqql09h3nmut8u1@ds053764.mongolab.com:53764/heroku_kkpqddm8']
+mongo_uri = ENV['mongodb://heroku_kkpqddm8:41chrq1pn46pqql09h3nmut8u1@ds053764.mongolab.com:53764/heroku_kkpqddm8']
 client = Mongo::Client.new(mongo_uri)
 db = client.heroku_kkpqddm8
 mongofile = File.read('redisdata.json')
