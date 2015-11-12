@@ -25,5 +25,6 @@ db = client.heroku_kkpqddm8
 mongofile = File.read('redisdata.json')
 mongo_data = JSON.parse(mongofile)
  mongo_data.each do |key, value|
-     db[:populatio].insert_one({_id: "#{key}", population:"#{value}"})
+ 	puts "#{key}"
+     # db[:populatio].insert_one({_id: "#{key}", population:"#{value}"})
  end
