@@ -27,4 +27,4 @@ mongo_data = JSON.parse(mongofile)
  # mongo_data.each do |key, value|
  # 	puts "#{key}"
      # db[:populatio].insert_one({_id: "#{key}", population:"#{value}"})
- end
+ #end
