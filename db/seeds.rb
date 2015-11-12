@@ -1,6 +1,5 @@
 require "redis"
 require 'mongo'
-require 'mongodb'
 # # Inserting into Postgres
 # # heroku run rake db:seed --app cse-rvg6285-2
 
@@ -21,7 +20,7 @@ require 'mongodb'
 
 # Inserting into mongo
 mongo_uri = ENV['mongodb://heroku_kkpqddm8:41chrq1pn46pqql09h3nmut8u1@ds053764.mongolab.com:53764/heroku_kkpqddm8']
-client = Mongo::Client.new(mongo_uri)
+client = MongoClient.new(mongo_uri)
 db = client.database
 mongofile = File.read('redisdata.json')
 mongo_data = JSON.parse(mongofile)
