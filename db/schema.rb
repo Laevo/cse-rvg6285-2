@@ -17,9 +17,7 @@ ActiveRecord::Schema.define(version: 20151110042226) do
   enable_extension "plpgsql"
 
   create_table "populations", primary_key: "name", force: :cascade do |t|
-    t.integer  "population"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "population"
   end
 
 end
