@@ -1,4 +1,6 @@
 require "redis"
+require 'json'
+require 'rubygems'
 
 # Inserting into Postgres
 # heroku run rake db:seed --app cse-rvg6285-2
