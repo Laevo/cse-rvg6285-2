@@ -1,5 +1,7 @@
 require "redis"
 require 'mongo'
+
+include Mongo
 # # Inserting into Postgres
 # # heroku run rake db:seed --app cse-rvg6285-2
 
