@@ -22,15 +22,8 @@ require 'mongo'
 mongo_uri = ENV['MONGOLAB_URI']
 client = Mongo::Client.new(mongo_uri);
 db = client.database
- db.collection_names.each do |name| 
- 	puts "#{name}"
- 	x = db[:population].find()
- 	puts x
- 	puts "\n"
+mongofile = File.read('redismongo.json')
+mongo_data = JSON.parse(mongofile)
+  mongo_data.each do |key, value|
+      db[:population].insert_one({_id: "#{key}", population:"#{value}"})
  end
-# mongofile = File.read('redismongo.json')
-# mongo_data = JSON.parse(mongofile)
-#   mongo_data.each do |key, value|
-#   	# puts "#{key}" ' = ' "#{value}"
-#     #  db[:population].insert_one({_id: "#{key}", population:"#{value}"})
-#  end
