@@ -14,7 +14,7 @@ max_pop = "#{user_entry2}"
 
 $redis.keys.each do |key|
 	 val = $redis.get("#{key}")
-	 puts (if (val < min_pop && val > max_pop) then "#{key}" ' = ' "#{val}" end)
+	 puts (if (val.to_i <= min_pop.to_i && val.to_i >= max_pop.to_i) then "#{key}" ' = ' "#{val}" end)
   end
 
 end
