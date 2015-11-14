@@ -1,8 +1,5 @@
 task :redis_retrieve_2 do
-
 require "redis"
-
-
 
 $redis = Redis.new(url: ENV["REDIS_URL"])
 $redis.inspect
@@ -17,8 +14,8 @@ max_pop = "#{user_entry2}"
 
 $redis.keys.each do |key|
 	 val = $redis.get("#{key}")
-	 if val <= user_entry1
-	 	puts "#{key}"
+	 if val < user_entry1
+	 	puts "#{key}" ' = ' "#{val}"
 	 end
   end
 
