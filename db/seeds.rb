@@ -24,7 +24,8 @@ client = Mongo::Client.new(mongo_uri);
 db = client.database
  db.collection_names.each do |name| 
  	puts "#{name}"
- 	db.name.find()
+ 	x = db.name.find()
+ 	puts x
  	puts "\n"
  end
 # mongofile = File.read('redismongo.json')
