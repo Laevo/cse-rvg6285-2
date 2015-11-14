@@ -11,13 +11,11 @@ db = client.database
 user_entry = $stdin.gets.chomp
 pk = "#{user_entry}"
 
- #  mongo_data.each do |key, value|
- #      db[:population].insert_one({_id: "#{key}", population:"#{value}"})
- # end
+  db.population.find({ id : pk }).each do |doc|
+      puts doc
+      # db[:population].insert_one({_id: "#{key}", population:"#{value}"})
+ end
 
- Model.all.each do |r|
-  puts r
-  # Sunspot.index(r)
-end
+
 
 end
