@@ -12,11 +12,11 @@ user_entry = $stdin.gets.chomp
 pk = "#{user_entry}"
 
   db[:population].find('_id' => "#{pk}").each do |country|
+      puts " ------ " 
       puts country['_id']
       puts country['population']
       puts " ------ " 
-      # db[:population].insert_one({_id: "#{key}", population:"#{value}"})
- end
+  end
 
 
 
