@@ -16,9 +16,9 @@ user_entry2 = $stdin.gets.chomp
 max_pop = "#{user_entry2}"
 
 $redis.keys.each do |key|
-	puts $redis.get("#{key}")
-	 #val = $redis.get("#{key}")
-	 if $redis.get("#{key}") >= min_pop && $redis.get("#{key}") <= max_pop
+	 val = $redis.get("#{key}")
+	 if val >= min_pop 
+	 	#&& val <= max_pop
 	 	puts "#{key}"
 	 end
   end
