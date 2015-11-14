@@ -15,7 +15,7 @@ print "Enter Max Population > "
 user_entry2 = $stdin.gets.chomp
 max_pop = "#{user_entry2}"
 
-  db[:population].each do |country|
+  db[:population].find().each do |country|
   	  pop = country['population']
       if (pop.to_i >= min_pop.to_i && pop.to_i <= max_pop.to_i)
       puts country['_id']
