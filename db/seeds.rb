@@ -26,6 +26,6 @@ db = client.database
 mongofile = File.read('redismongo.json')
 mongo_data = JSON.parse(mongofile)
   mongo_data.each do |key, value|
-  	puts "#{key}"
+  	puts "#{key}" ' = ' "#{value}"
      # db[:populatio].insert_one({_id: "#{key}", population:"#{value}"})
- #end
+ end
