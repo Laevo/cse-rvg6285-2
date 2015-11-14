@@ -1,4 +1,4 @@
-task :redis_retrieve_2 do
+task :redis_get_nonpk do
 require "redis"
 
 $redis = Redis.new(url: ENV["REDIS_URL"])

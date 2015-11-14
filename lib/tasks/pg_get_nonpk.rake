@@ -1,4 +1,4 @@
-task :pg_retrieve_2 do
+task :pg_get_nonpk do
 require 'pg'
 require 'uri'
 

@@ -1,4 +1,4 @@
-task :redis_retrieve do
+task :redis_get_pk do
 
 require "redis"
 
