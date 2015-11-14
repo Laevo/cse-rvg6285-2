@@ -12,7 +12,7 @@ print "Enter Max Population > "
 user_entry2 = $stdin.gets.chomp
 max_pop = "#{user_entry2}"
 
-$redis.limit(20).keys.each do |key|
+$redis.keys.each do |key|
 	 val = $redis.get("#{key}")
 	 if (val.to_i >= min_pop.to_i && val.to_i <= max_pop.to_i) 
 	 	puts "#{key}" ' = ' "#{val}"
