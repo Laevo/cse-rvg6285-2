@@ -15,7 +15,7 @@ print "Enter Max Population > "
 user_entry2 = $stdin.gets.chomp
 max_pop = "#{user_entry2}"
 
-output = "select name, population from populations where population between $1 and $2 limit 20"
+output = "select name, population, '-------' from populations where population between $1 and $2 limit 20"
 ans = postgres.exec_params(output, [min_pop, max_pop])
 puts ans.values
 
