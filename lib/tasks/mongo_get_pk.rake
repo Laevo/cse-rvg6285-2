@@ -11,8 +11,8 @@ db = client.database
 user_entry = $stdin.gets.chomp
 pk = "#{user_entry}"
 
-  db[:population].find('_id' => "#{pk}").each do |doc|
-      puts doc
+  db[:population].find('_id' => "#{pk}").each do |name, value|
+      puts "#{name}" ' = ' "#{value}"
       # db[:population].insert_one({_id: "#{key}", population:"#{value}"})
  end
 
