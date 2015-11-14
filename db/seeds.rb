@@ -24,7 +24,7 @@ client = Mongo::Client.new(mongo_uri);
 db = client.database
  db.collection_names.each do |name| 
  	puts "#{name}"
- 	x = db.name.find()
+ 	x = db[:population].find()
  	puts x
  	puts "\n"
  end
