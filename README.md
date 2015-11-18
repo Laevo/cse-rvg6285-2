@@ -17,8 +17,8 @@ CSE-RVG6285-2
   	`heroku run rake pg_get_nonpk`  
   	`heroku run rake redis_get_nonpk`  
   	`heroku run rake mongo_get_nonpk`  
-  	These scripts will prompt user to enter minimum and maximum population values ex. 1241212 and 123342334 and will return all the countries having population in this range.
+  	These scripts will prompt user to enter minimum and maximum population values ex. 1941212 and 123342334 and will return all the countries having population in this range.
 
-  3. I found making connections and retrieving data from primary keys to be easy as only one value had to be entered and searched for.
+  3. I found retrieving data from primary keys to be easy as only one value had to be entered and searched for.
 
-  4. I found retrieving data from non primary attributes to be hard as the data had to be iterated and searched for a range of values. There were mainly syntax errors in here.
+  4. I found making data source connections and retrieving data from non primary attributes to be hard as I didn't find any way of searching through values in redis, so had to search through keys, fetch the value for each key and then put conditions on those values.
